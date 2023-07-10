@@ -13,13 +13,9 @@
 	"packageRules": [
 		{
 			"matchPackagePatterns": ["@openui5/sap.ui.core"],
-			"versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)($|\\.)",
+			"extractVersion": "^(?<version>\\d+\\.\\d+)",
+			"versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$",
 			"automerge": false
-		},
-		{
-			"enabled": false,
-			"matchPackagePatterns": ["@openui5/sap.ui.core"],
-			"matchUpdateTypes": ["patch", "pin"]
 		}
 	] 
 }
