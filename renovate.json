@@ -13,7 +13,6 @@
 	"packageRules": [
 		{
 			"matchPackagePatterns": ["@openui5/sap.ui.core"],
-			"matchUpdateTypes": ["major", "minor"],
 			"versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$",
 			"automerge": false
 		},
