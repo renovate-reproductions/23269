@@ -1,0 +1,26 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"enabled": true,
+	"extends": ["config:base"],
+	"regexManagers": [
+		{
+			"fileMatch": ["^.*/?index.html$"],
+			"matchStrings": ["src=\"https://sapui5.hana.ondemand.com/(?<currentValue>.*?)/resources.*"],
+			"depNameTemplate": "@openui5/sap.ui.core",
+			"datasourceTemplate": "npm"
+		}
+	],
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["@openui5/sap.ui.core"],
+			"matchUpdateTypes": ["major", "minor"],
+			"versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)$",
+			"automerge": false
+		},
+		{
+			"enabled": false,
+			"matchPackagePatterns": ["@openui5/sap.ui.core"],
+			"matchUpdateTypes": ["patch", "pin"]
+		}
+	] 
+}
